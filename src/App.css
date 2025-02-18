@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+.btn{
+  padding:.5rem 1rem;
+  border: none;
+  background: #00a6ff;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 1s;
+}
+input{
+padding:.5rem 1rem;
+margin: .5rem 0;
+outline: none;
+border: 1px solid #eee;
+}
