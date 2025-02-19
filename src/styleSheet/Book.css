@@ -1,25 +1,18 @@
 .card{
  position: relative;
  width: 30%;
- border: 1px solid #eee;
+ border: 1px solid #777777;
  padding: 10px;
  margin: 10px auto;
  border-radius: 6px;
- background: #3e3e3e;
  display: flex;
  align-items: center;
  justify-content: space-between;
  flex-direction: column;
  transition: 1s;
+ cursor: pointer;
 }
  h2,
  h3{
- color: #eee;
-}
-.card:hover {
- background: #f72d00;
-}
-.card:hover .btn{
- background: #ffffff;
- color: #000000;
+ color: #111111;
 }

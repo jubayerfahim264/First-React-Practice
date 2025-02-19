@@ -1,14 +1,13 @@
 import React from "react";
 import "../App.css";
-import '../styleSheet/Book.css'
-const Book = props => {
+import "../styleSheet/Book.css";
+const Book = (props) => {
   return (
-    <div className="card">
+    <div onClick={props.Del} className="card">
       <h2>Book:{props.BookName}</h2>
-      <button onClick={props.change} className="btn">Change Book Name</button>
-      <h3>Writter:{props.WritterName}</h3>
-      <input type="text" name="none" id="none" onChange={props.ChangeBy} value={props.BookName}/>
+      <h3>Writer:{props.WriterName}</h3>
     </div>
   );
+  // <input type="text" name="none" id="none" onChange={props.ChangeBy} value={props.BookName}/>
 };
 export default Book;
