@@ -1,17 +1,46 @@
 .App {
   text-align: center;
-}
-.btn{
-  padding:.5rem 1rem;
-  border: none;
-  background: #00a6ff;
-  cursor: pointer;
-  color: #ffffff;
   transition: 1s;
 }
-input{
-padding:.5rem 1rem;
-margin: .5rem 0;
-outline: none;
-border: 1px solid #b4b4b4;
+.btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 91, 187, 0.5);
 }

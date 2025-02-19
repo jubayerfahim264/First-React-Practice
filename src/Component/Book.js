@@ -3,11 +3,19 @@ import "../App.css";
 import "../styleSheet/Book.css";
 const Book = (props) => {
   return (
-    <div onClick={props.Del} className="card">
+    <div className="card">
       <h2>Book:{props.BookName}</h2>
       <h3>Writer:{props.WriterName}</h3>
+      <input
+        type="text"
+        onChange={props.inputName}
+        value={props.BookName}
+        className="input-field"
+      />
+      <button onClick={props.Del} className="btn">
+        Delete
+      </button>
     </div>
   );
-  // <input type="text" name="none" id="none" onChange={props.ChangeBy} value={props.BookName}/>
 };
 export default Book;
