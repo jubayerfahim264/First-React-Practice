@@ -44,3 +44,33 @@
   border-color: #0056b3;
   box-shadow: 0 0 8px rgba(0, 91, 187, 0.5);
 }
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #0056b3;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+}
+.navbar ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0 1rem;
+  list-style-type: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: #343434;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.navbar a:hover,
+a:active,
+a.active {
+  color: #ff2200;
+}

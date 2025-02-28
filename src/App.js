@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
 import MainComponent from "./Component/MainComponent";
+import { BrowserRouter } from "react-router-dom";
 const App = () => {
-  return <MainComponent></MainComponent>;
+  return (
+    <div>
+      <BrowserRouter>
+        <MainComponent />
+      </BrowserRouter>
+    </div>
+  );
 };
 export default App;

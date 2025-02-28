@@ -1,47 +1,55 @@
 import React, { Component } from "react";
-import Book from "./Book";
+import { Routes, Route, NavLink } from "react-router-dom";
 import BookList from "../assets/book";
+import NewBook from "../repratational/NewBook";
+import Booklist from "../repratational/Booklist";
+import BookDetail from "../repratational/BookDetail";
+
 class MainComponent extends Component {
-  state = {
-    books: BookList,
-    showBooks: true,
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: BookList || [], // ✅ books খালি অ্যারে নিশ্চিত করা হলো
+      selectBook: null,
+    };
+  }
+  selectBookHandler = (bookId) => {
+    const book = this.state.books.filter((book) => book.id === bookId)[0];
+    this.setState({ selectBook: book });
   };
-
-  deleteBook = (index) => {
-    this.setState({ books: this.state.books.filter((_, i) => i !== index) });
-  };
-
-  updateBookName = (event, index) => {
-    const books = [...this.state.books];
-    books[index] = { ...books[index], name: event.target.value };
-    this.setState({ books });
-  };
-
-  toggleBooks = () => {
-    this.setState((prevState) => ({ showBooks: !prevState.showBooks }));
-  };
-
   render() {
     return (
       <div className="App">
-        <h1 className="title">📚 Book List</h1>
-        <button className="btn" onClick={this.toggleBooks}>
-          {this.state.showBooks ? "Hide Books" : "Show Books"}
-        </button>
-        <div className="book-container">
-          {this.state.showBooks &&
-            this.state.books.map((book, index) => (
-              <Book
-                key={book.id}
-                BookName={book.name}
-                WriterName={book.writer}
-                Del={() => this.deleteBook(index)}
-                inputName={(event) => this.updateBookName(event, index)}
-              />
-            ))}
+        <div className="navbar">
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/new-book">New Book</NavLink>
+            </li>
+          </ul>
         </div>
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Booklist
+                books={this.state.books}
+                selectBookHandler={this.selectBookHandler}
+              />
+            }
+          />
+          <Route
+            path="/new-book"
+            element={<NewBook books={this.state.books} />}
+          />
+        </Routes>
+        <BookDetail book={this.state.selectBook} />
       </div>
     );
   }
 }
+
 export default MainComponent;
