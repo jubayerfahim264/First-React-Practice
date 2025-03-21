@@ -1,6 +1,19 @@
 .card {
   position: relative;
-  width: 30%;
+  width: 40%;
+  border: 1px solid #777777;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.book-card {
+  position: relative;
+  width: 80%;
   border: 1px solid #777777;
   padding: 10px;
   margin: 10px auto;
@@ -15,10 +28,11 @@ h2,
 h3 {
   color: #111111;
 }
-.card:hover {
+.card:hover,
+.book-card:hover {
   color: #ff4500;
   cursor: pointer;
-    border: 1px solid #ff4500;
+  border: 1px solid #ff4500;
 }
 .card:hover h2 {
   color: #ff4500;

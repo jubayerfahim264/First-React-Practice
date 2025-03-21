@@ -74,3 +74,26 @@ a:active,
 a.active {
   color: #ff2200;
 }
+.form {
+  width: 30%;
+  display: block;
+  margin: 1rem auto;
+  background-color: #eee;
+  box-shadow: 5px 5px 10px rgb(to right, #030303, #454545);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.form-input {
+  padding: 0.8rem 0.3rem;
+  margin: 0.5rem 0rem;
+  width: 100%;
+  border: 1px solid #eee;
+}
+.form label {
+  margin: 0.5rem 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}

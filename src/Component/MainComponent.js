@@ -9,7 +9,7 @@ class MainComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: BookList || [], // ✅ books খালি অ্যারে নিশ্চিত করা হলো
+      books: BookList || [], 
       selectBook: null,
     };
   }
@@ -45,8 +45,11 @@ class MainComponent extends Component {
             path="/new-book"
             element={<NewBook books={this.state.books} />}
           />
+          <Route
+            path="/:id"
+            element={<BookDetail book={this.state.selectBook} />}
+          />
         </Routes>
-        <BookDetail book={this.state.selectBook} />
       </div>
     );
   }

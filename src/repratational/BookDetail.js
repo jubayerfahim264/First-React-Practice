@@ -6,9 +6,10 @@ const BookDetail = (props) => {
     return <div></div>;
   }
   return (
-    <div>
+    <div className="book-card">
       <h2>{props.book.name}</h2>
       <h3>{props.book.writer}</h3>
+      <p>{props.book.description}</p>
     </div>
   );
 };
