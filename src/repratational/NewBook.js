@@ -81,5 +81,4 @@ class NewBook extends Component {
   }
 }
 export default NewBook;
-//control form
-// <form onSubmit={this.HandleSubmit}><label htmlFor="bookName">Book:</label><br /> <input type="text" name="bookName" placeholder="Add Book" className="form-input" value={this.state.bookName}  onChange={this.HandleInput}/> <br /> <label htmlFor="writer">Writer:</label> <br /> <input type="text"  name="writer" placeholder="Writer Name" className="form-input" value={this.state.writer} onChange={this.HandleInput} /> <br /><label htmlFor="description">Description:</label> <br /> <textarea name="description" placeholder="Write Description" className="form-input" value={this.state.description} onChange={this.HandleInput} /> <br /> <input type="submit" value="Add Book"/>
+
